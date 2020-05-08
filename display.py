@@ -27,7 +27,7 @@ entries = []
 def main ():
    with open ("/tmp/netflow.csv", "r") as csv_file:
       csv_reader = csv.reader(csv_file, delimiter=',')
-      sorted_csv = sorted(csv_reader, key=operator.itemgetter(5))
+      sorted_csv = sorted(csv_reader, key=lambda row: int(row[6]), reverse=True)
       counter = 0
       for row in sorted_csv:
          if counter == 10:

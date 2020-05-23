@@ -25,7 +25,7 @@ class Netflow:
          +self.src_port.ljust(14)\
          +self.dst_port.ljust(19)\
          +self.proto.ljust(11)\
-         +self.pkts.ljust(9)\
+         +self.pkts.ljust(12)\
          +self.octs
 
 
@@ -48,7 +48,7 @@ def main ():
                   +"Source Port".ljust(14)\
                   +"Destination Port".ljust(19)\
                   +"Protocol".ljust(11)\
-                  +"Packets".ljust(9)\
+                  +"Packets".ljust(12)\
                   +"Bytes\n"
 
    print(header_string)

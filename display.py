@@ -8,7 +8,14 @@ class Netflow:
       self.dst_ip = dst_ip
       self.src_port = src_port
       self.dst_port = dst_port
-      self.proto = proto
+      if proto == "6":
+         self.proto = "tcp"
+      elif proto == "17":
+         self.proto = "udp"
+      elif proto == "1":
+         self.proto = "icmp"
+      else :      
+         self.proto = proto
       self.pkts = pkts
       self.octs = octs
 
